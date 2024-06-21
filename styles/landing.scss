@@ -1,0 +1,718 @@
+main {
+  @apply w-full h-full;
+}
+
+.wrapper {
+  @apply w-[90%] mx-auto h-full py-4;
+
+  @media screen and (min-width: 600px) {
+    @apply w-[90%] mx-auto h-full py-8;
+  }
+}
+
+.top-bar {
+  @apply flex flex-col items-center justify-between gap-3;
+
+  .btn {
+
+    &.primary,
+    &.primary:focus,
+    &.primary:active,
+    &.primary:visited {
+      border: 3px solid #000000;
+      background-color: transparent;
+      color: #000000;
+
+      &:before {
+        width: 0;
+        height: 100%;
+        right: 0;
+        transition: width 0.5s ease-in-out;
+      }
+
+      &:hover {
+        cursor: pointer;
+        color: white;
+
+        &:before {
+          width: 100%;
+          left: 0;
+          right: auto;
+        }
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        background: #000000;
+        z-index: -1;
+      }
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    @apply flex-row;
+  }
+}
+
+.logo {
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  font-size: 45px;
+
+}
+
+button.btn-connect {
+  @apply w-max p-[10px] border-[2px] border-solid border-black rounded;
+}
+
+// mid content
+.mid-content {
+  @apply h-full flex items-center flex-col justify-center;
+  gap: 0.5rem;
+}
+
+.title {
+  padding-top: 30px;
+  @apply font-bold text-[28px] text-center;
+
+  @media screen and (min-width: 600px) {
+    @apply text-[45px];
+  }
+}
+
+
+.description {
+  font-size: 18px;
+  padding: 15px 100px;
+  text-align: center;
+  max-width: 1260px;
+  line-height: 20px;
+}
+
+.learn-more {
+  font-size: 21px;
+  text-align: center;
+  max-width: 1260px;
+  line-height: 18px;
+}
+
+.passage {
+  @apply text-center leading-[1.3] w-full mx-auto my-2 text-[16px];
+
+  @media screen and (min-width: 600px) {
+    @apply text-[20px] max-w-[60%];
+  }
+}
+
+.message {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  @apply text-center leading-[1.3] w-full mx-auto text-[20px];
+
+  @media screen and (min-width: 600px) {
+    @apply text-[25px] max-w-[70%];
+  }
+}
+
+.sub-message {
+  @apply text-center leading-[1.3] w-full mx-auto text-[14px];
+
+  @media screen and (min-width: 600px) {
+    @apply text-[20px] max-w-[70%];
+  }
+
+}
+
+.link-error {
+  color: #ff3333;
+  font-weight: 500;
+  padding: 10px;
+}
+
+.link-success {
+  color: #4BB543;
+  font-weight: 500;
+  padding: 10px;
+}
+
+
+
+.btn {
+  @apply appearance-none relative grid place-content-center uppercase text-center font-bold overflow-hidden z-[1];
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  max-height: 50px;
+  padding: 22px 40px;
+  font-size: 16px;
+  transition: all 0.1s;
+}
+
+a.link {
+  text-decoration: underline;
+  @apply text-[#b124fd] text-[23px] font-semibold capitalize transition-all ease-in duration-200;
+  margin: 0 10px;
+
+  &:hover {
+    @apply text-[#8e3bba];
+  }
+
+  @media screen and (min-width: 600px) {
+    @apply text-[21px];
+  }
+}
+
+.default-btn {
+  padding: 13px 25px;
+  position: relative;
+  min-width: 135px;
+  z-index: 2;
+  display: grid;
+  place-content: center;
+  text-decoration: none;
+  color: #000000;
+  box-sizing: border-box;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: transparent;
+  font-size: 1.1em;
+  transition: 0.3s;
+  border: 4px solid #000000;
+  border-image-source: linear-gradient(90deg,
+      rgb(18, 18, 18) 0%,
+      rgb(0, 0, 0) 34%,
+      rgb(0, 0, 0) 73%,
+      rgb(0, 0, 0) 100%);
+  border-image-slice: 4;
+  overflow: hidden;
+}
+
+.gradient-btn {
+  padding: 13px 25px;
+  position: relative;
+  min-width: 135px;
+  z-index: 2;
+  display: grid;
+  place-content: center;
+  text-decoration: none;
+  color: #a557fd;
+  box-sizing: border-box;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: transparent;
+  font-size: 1.1em;
+  transition: 0.3s;
+  border: 4px solid #a557fd;
+  border-image-source: linear-gradient(90deg,
+      rgba(184, 68, 254, 1) 0%,
+      rgba(150, 102, 254, 1) 34%,
+      rgba(111, 142, 255, 1) 73%,
+      rgba(84, 169, 255, 1) 100%);
+  border-image-slice: 4;
+  overflow: hidden;
+}
+
+.gradient-btn:hover,
+.default-btn:hover {
+  color: #fff;
+}
+
+.no-hover {
+  pointer-events: none;
+}
+
+.gradient-btn:hover:after,
+.default-btn:hover:after {
+  width: 120%;
+}
+
+.gradient-btn:after,
+.default-btn:after {
+  content: "";
+  position: absolute;
+  transition: 0.3s;
+  content: "";
+  width: 0;
+  bottom: -1px;
+  height: 3px;
+  height: 120%;
+  left: -10%;
+  transform: skewX(15deg);
+  z-index: -1;
+}
+
+.gradient-btn:after {
+  background: linear-gradient(90deg,
+      rgba(184, 68, 254, 1) 0%,
+      rgba(150, 102, 254, 1) 34%,
+      rgba(111, 142, 255, 1) 73%,
+      rgba(84, 169, 255, 1) 100%);
+}
+
+.default-btn:after {
+  background: linear-gradient(90deg,
+      #000000 0%,
+      #000000 34%,
+      #000000 73%,
+      #000000 100%);
+}
+
+.top-bar button {
+  font-size: 13px;
+  padding: 10px 4px;
+
+  @media screen and (min-width: 600px) {
+    font-size: 16px;
+    padding: 12px 12px;
+  }
+}
+
+.disabled-button {
+  color: #808080;
+  cursor: not-allowed;
+  pointer-events: none;
+  border: 4px solid #0000006b;
+  opacity: 0.6;
+}
+
+.msg-container {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.cards-container {
+  width: 90%;
+  min-height: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px auto 20px auto;
+  padding: 0;
+  gap: 30px;
+  border-radius: 10px;
+}
+
+.cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0 10px 0;
+}
+
+.box {
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0.5em 1em -0.125em #0a0a0a1a, 0 0 0 1px #0a0a0a05;
+  color: #4a4a4a;
+  display: block;
+  padding: 1.25rem;
+  border-radius: 5px;
+  background-image: linear-gradient(to right top,
+      #a1a9fe,
+      #b6b8fe,
+      #c9c8fe,
+      #dbd8ff,
+      #ebe8ff,
+      #ede9ff,
+      #efeaff,
+      #f1ebff,
+      #eadbff,
+      #e5caff,
+      #e2b9ff,
+      #e1a6fb);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  box-shadow: 0 32px 64px -12px rgb(183 68 254 / 51%),
+    0 4px 32px rgb(84 158 255 / 52%);
+
+  border-radius: 5px;
+  background-image: linear-gradient(to right top, #a1a9fe, #b6b8fe, #c9c8fe, #dbd8ff, #ebe8ff, #ede9ff, #efeaff, #f1ebff, #eadbff, #e5caff, #e2b9ff, #e1a6fb);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  box-shadow: 0 32px 64px -12px #b744fe82, 0 4px 32px #549eff85;
+  width: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+.input-bar {
+  padding: 15px 18px;
+  border-radius: 5px 0px 0px 5px;
+  width: 100%;
+  border: 1px solid #b124fd83;
+  font-family: Gilroy;
+  font-weight: 500;
+  background-color: #fff;
+}
+
+.input-bar:focus,
+.input-bar:focus-visible,
+.input-bar:active,
+.search-bar:hover {
+  border: 1px solid #b124fd !important;
+  outline: 1px solid #b124fd !important;
+}
+
+.field.is-grouped {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.is-expanded {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+select {
+  color: #b645fe;
+  padding: 13px 10px;
+  border-radius: 5px;
+  border: 1px solid #b645fe;
+  font-weight: 600;
+  font-size: 1.1rem;
+
+  &::after,
+  &:focus-visible {
+    outline: 1px solid #b645fe;
+    border: 1px solid #b645fe;
+  }
+
+  min-width: 300px;
+}
+
+.connect-wallet-btn-grp {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+// Modal CSS STARTS 
+.modal-window {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.25);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+
+  &:target {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &>div {
+    width: 450px;
+    min-height: 250px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background: white;
+    border-radius: 10px;
+  }
+
+  header {
+    font-weight: bold;
+  }
+
+
+  P {
+    font-size: 20px;
+    text-align: justify;
+  }
+}
+
+.mintbutton {
+  border-radius: 8px;
+  width: 100%;
+  background-color: rgb(255, 204, 2);
+  color: black;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 65px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.mintdisabledbutton {
+  background-color: #c7c7c7;
+}
+
+.walletbtn {
+  border-radius: 8px;
+  height: 45px;
+  color: #000;
+  background-color: rgb(255, 204, 2);
+  font-size: 10px;
+  font-weight: 500;
+  text-align: center;
+  min-width: 110px;
+}
+
+.modal-close {
+  color: #aaa;
+  line-height: 50px;
+  font-size: 80%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 70px;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    color: black;
+  }
+}
+
+.stats-container {
+  @media screen and (max-width: 820px) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+.stats-card {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 32px 64px -12px #b744fe83, 0 4px 32px #549eff85;
+  margin: 20px;
+  width: 200px;
+  display: inline-block;
+}
+
+// / CSS for Card Titles /
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+// / CSS for Card Data */
+.card-data {
+  font-size: 30px;
+  margin-top: 25px;
+}
+
+// MODAL CSS ENDS
+@media screen and (min-width: 800px) {
+  .maintenance-img {
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .connect-wallet-btn-grp {
+    gap: 8px;
+  }
+
+  .description {
+    font-size: 14px;
+    padding: 15px 20px;
+    text-align: center;
+    max-width: 1260px;
+    line-height: 18px;
+    display: none;
+  }
+
+  .learn-more {
+    font-size: 16px;
+    text-align: center;
+    max-width: 1260px;
+    line-height: 18px;
+  }
+
+  a.link {
+    font-size: 18px;
+
+  }
+
+  .top-bar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    button {
+      min-width: 140px;
+    }
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .box {
+    width: 100%;
+  }
+
+  .field.is-grouped {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 10px;
+
+    .btn {
+      width: 100%;
+    }
+  }
+
+  select {
+    padding: 6px 5px;
+    font-weight: 600;
+    font-size: 0.8em;
+    min-width: 250px;
+  }
+
+  .card-description-wrapper {
+    flex-direction: column;
+  }
+
+  .collections-wrapper {
+    .gradient-btn {
+      min-width: 220px
+    }
+  }
+}
+
+.collections-wrapper {
+  padding: 100px 100px;
+
+  .collections {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+
+    .collection {
+      max-width: 300px;
+      background-color: hsla(0, 0%, 100%, .788);
+      border-radius: 10px;
+      box-shadow: 0 32px 64px -12px rgba(183, 68, 254, .514), 0 4px 32px rgba(84, 158, 255, .522);
+
+      .img {
+        img {
+          border-radius: 10px;
+          height: 300px;
+        }
+      }
+
+      .collection-details {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        gap: 20px;
+        padding: 12px 12px;
+
+        p {
+          font-size: 16px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  button {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    min-width: 100px;
+    text-transform: uppercase;
+    background-color: transparent;
+    font-weight: 700;
+    appearance: none;
+    color: #000000;
+    place-content: center;
+    text-decoration: none;
+
+    &:hover {
+      cursor: pointer;
+      background: #c764ff;
+      border-radius: 10px;
+      color: white;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    display: block;
+
+  }
+}
+.text-bold {
+  font-weight: 600;
+}
+
+#leftpanel {
+  width: 40%;
+  height: 400px;
+}
+
+#rightpanel {
+  width: 60%;
+  margin-left: 20px;
+  height: 400px;
+}
+
+#swoopslogo, #vortexlogo {
+  display: flex;
+}
+
+@media screen and (max-width: 600px) {
+
+  body {
+    max-width: 100%;
+  }
+  #hero {
+    display: none;
+  }
+
+  #container {
+    margin-top: 150px;
+  }
+
+  #leftpanel, #rightpanel {
+    width: 100%;
+  }
+
+  #leftpanel {
+    height: 370px;
+  }
+
+  #rightpanel {
+    margin-top: 35px;
+    margin-left: 0;
+    height: 300px;
+  }
+
+  #swoopslogo, #vortexlogo {
+    display: none;
+  }
+  
+}

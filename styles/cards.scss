@@ -1,0 +1,260 @@
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffffc9;
+  border-radius: 8px;
+  min-width: 358px;
+  width: 100%;
+  padding: 23px;
+  // box-shadow: 5px 5px 5px 5px #0000003d;
+ // box-shadow: 0 32px 64px -12px #b744fe83, 0 4px 32px #549eff85;
+  color: #000;
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px;
+
+    .card-heading {
+      font-size: 18px;
+      line-height: 18px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-weight: 600;
+
+    }
+
+    .card-heading-right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: rgb(185 107 237);
+      border-radius: 20px;
+      padding: 8px 16px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      color: #fff;
+
+      .active {
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+        background-color: #8fcb8f;
+      }
+
+      .inactive {
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+        background-color: #888;
+      }
+    }
+  }
+
+
+  .card-middle-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    min-height: 330px;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    padding: 0 50px;
+  }
+
+  .card-description-wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    gap: 5px;
+    padding: 24px 24px 0 24px;
+
+    .card-description-left {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      h1 {
+        font-size: 250%;
+        line-height: 18px;
+        font-weight: 200;
+        color: #000;
+      }
+
+      p {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 17px;
+        padding-left: 30px;
+
+
+        
+      }
+
+      input {
+        border: 1px solid #777;
+        clear: both;
+        font-family: monospace;
+        font-size: 15px;
+        padding: 4px;
+        width: 400px;
+      }
+    }
+  }
+
+.infoline {
+  color: #000;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-bottom: 20px;
+
+  label {
+    font-weight: 600;
+    width: 75%;
+    display: block;
+  }
+
+  span {
+    font-weight: 300;
+    margin-top: 5px;
+    display: inline-block;
+  }
+}
+
+  .card-bottom-wrapper {
+    display: flex;
+    justify-content: space-around;
+    gap: 35px;
+    padding: 20px 0;
+
+    .card-bottom-left {
+      flex: 3;
+      display: flex;
+    }
+
+    .card-bottom-right {
+      flex: 2;
+      justify-content: flex-start;
+      display: flex;
+    }
+  }
+}
+
+div.coins {
+  font-size: 44px;
+  font-family: monospace;
+}
+
+.small-top {
+  margin-top: -15px;
+}
+
+#newTransferAccount.address-error {
+  background-color: #e17a7a;
+}
+
+#newTransferAccount.address-ok {
+  background-color: #6fec90;
+}
+//   background-color: #000;
+// }
+
+.transfer-btn {
+  width: 220px !important;
+  display: flex !important;
+  align-items: center;
+  padding: 13px!important;
+  margin-right: 20px;
+
+  span {
+    font-weight: 500;
+    margin-left: 5px;
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .wrapper, .cards-container{ width: 100%}
+
+  .cards { padding: 20px 0px}
+  .radio {
+    padding: 5px;
+    height: 40px;
+    width: 250px;
+    font-size: 16px;
+    margin-bottom: 10px;
+
+    &.off {
+      .bar {
+        left: 110px;
+      }
+    }
+
+    .wrap {
+      height: 30px;
+    }
+
+    label {
+
+      &[for^='on'] {
+        margin-left: 7px;
+        color: #fff;
+      }
+
+      &[for^='off'] {
+        margin-right: 7px;
+        color: #000;
+
+      }
+    }
+
+    .bar {
+      left: -60px;
+      height: 30px;
+      width: 190px;
+    }
+  }
+
+  .transfer-btn {
+    padding: 8px 12px;
+    font-size: 0.8em;
+    width: 100% !important;
+    margin: 0 20px;
+  }
+
+  .card-wrapper {
+    min-width: 250px;
+    margin: 0 20px;
+
+    .card-header {
+      .card-heading {
+        font-size: 14px;
+        line-height: 14px;
+      }
+
+      .card-heading-right {
+        gap: 6px;
+        padding: 8px 10px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        font-size: 12px;
+      }
+    }
+
+    .card-middle-image-wrapper {
+      padding: 0 10px;
+      min-height: 280px;
+    }
+
+    .card-bottom-wrapper {
+      gap: 15px;
+      padding: 15px 0;
+      flex-direction: column;
+    }
+  }
+}

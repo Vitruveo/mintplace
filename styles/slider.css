@@ -1,0 +1,77 @@
+input[type='range'] {
+    /* removing default appearance */
+    -webkit-appearance: none;
+    appearance: none;
+    /* creating a custom design */
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    border-radius: 15px;
+    /* overflow: hidden;  */
+
+    /* New additions */
+    height: 6px;
+    background: #f3ebfe;
+   
+}
+
+/* Thumb: webkit */
+input[type='range']::-webkit-slider-thumb {
+    /* removing default appearance */
+    -webkit-appearance: none;
+    appearance: none;
+    /* creating a custom design */
+    height: 15px;
+    width: 15px;
+    background-color: #7043e4;
+    border-radius: 50%;
+    border: none;
+
+    /* box-shadow: -407px 0 0 400px #B96BED; emove this line */
+  
+    /* Set the left position of the thumb */
+}
+
+/* Thumb: Firefox */
+input[type='range']::-moz-range-thumb {
+    height: 15px;
+    width: 15px;
+    background-color: #7043e4;
+    border-radius: 50%;
+    border: none;
+
+    /* box-shadow: -407px 0 0 400px #B96BED; emove this line */
+    transition: 0.2s ease-in-out;
+   
+    /* Set the left position of the thumb */
+}
+
+
+.slider-wrapper {
+    color: #4b4949;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.range {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+    height: 2rem;
+    width: 100%;
+    padding: 0px 10px;
+    font-size: 24px;
+    color: #000;
+    font-family: 'Exo 2 Thin', sans-serif;
+}
+
+.value {
+    width: 50px;
+    text-align: center;
+    font-size: 24px;
+}
