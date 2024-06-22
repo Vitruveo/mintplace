@@ -126,7 +126,7 @@ function MintPlaceCard({ disabled, config, connectedAddress, apiKey }) {
                         { minted > 0 ?
                          <div className="infoline">
                             <label>My Token</label>
-                            <span>{Number(minted)} <a href={`https://test-explorer.vitruveo.xyz/address/${connectedAddress}/token-transfers#address-tabs`} target="_new">(Explorer)</a></span>
+                            <span>{Number(minted)} <a href={`https://explorer.vitruveo.xyz/address/${connectedAddress}/token-transfers#address-tabs`} target="_new">(Explorer)</a></span>
                          </div> :
                          <></>
                         }
